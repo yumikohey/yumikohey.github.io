@@ -5,7 +5,6 @@ DBC
 11/20/2014
 
 Author: Yumiko
-
 Challenge 1
 1. What was the most challenging for you in going through this material?
 	Since Command Line is not strange for me, I guess the most challenging one is alias command, because I didn't use it much.
