@@ -1,1 +1,0 @@
-Setting up website on GitHub is not new to me, yet it's the first time I tried. I feel so cool to air a website under github.io subdomain.
