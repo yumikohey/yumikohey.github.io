@@ -1,0 +1,70 @@
+main{
+	width: 100%;
+}
+
+#header{
+	height: 100px;
+	width: 100%;
+	border: 1px solid #000;
+}
+
+#blog_reg{
+	height: 50px;
+	width: 800px;
+	background-color: #ddd;
+	margin-left: 50px;
+}
+
+#blog_reg > h1 {
+	padding: 10px 25px;
+}
+
+h2{
+	font-family: Helvetica;
+}
+
+h4 {
+	color: #888;
+}
+
+section {
+	width: 100%;
+	padding-left: 50px;
+	height: 400px;
+}
+
+#post-bkgrnd{
+	width: 40%;
+	height: 30px;
+	background-color: #ddd;
+}
+
+
+#date {
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	border-radius: 100px;
+	margin: 120px 10px;
+	float: left;
+	padding: 10px;
+}
+
+#date > h4 {
+	color: #fff;
+	margin: 15px 28px;
+	line-height: 1.5em;
+	font-size: 24px;
+}
+
+#blog_entry {
+	height: 300px;
+	width: 70%;
+	margin: 10px 40px;
+	float: left;
+	text-align: justify;
+}
+
+#blog_entry > h4 {
+	line-height: 0.5em;
+}
