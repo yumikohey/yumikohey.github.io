@@ -1,0 +1,296 @@
+html{
+	color: #000;
+	font-family: Helvetica;
+	overflow-y: scroll; 
+	overflow-x: hidden;
+}
+body{
+}
+.container-fluid{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	margin:0 auto;
+}
+
+#top{
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+	border-bottom: 10px solid #C2973C;
+	margin-top: -10px;
+	margin-left: -10px;
+}
+
+
+/* Social Media Button */
+#socialBar_top{
+	width: 25%;
+	height: 30px;
+	margin: -15px -80px;
+	float: right;
+}
+
+#socialBar_top img {
+	padding: 0 15px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 10px;
+}
+
+ul li {
+	display: inline;
+}
+
+#expandButton {
+	padding-left: 46%;
+	margin-top: 10px;
+}
+
+.centerBox{
+	margin-top: -50px;
+	padding-top: -10px;
+}
+
+#diamondButton {
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-bottom-color: #C2973C;
+	position: relative;
+	top: -30px;
+}
+
+#diamondButton:after {
+	content: '';
+	position: absolute;
+	left: -30px;
+	top: 30px;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color: #C2973C;
+}
+
+#plusSign {
+	margin-left: -14px;
+	color: #fff;
+	font-size: 3em;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+/* Banner Section */
+
+#banner {
+	width: 100%;
+	height: 300px;
+}
+
+#banner img {
+	margin-top: -200px;
+	margin-left: -10px;
+	width: 100%;
+	position: absolute;
+	z-index: -500;
+}
+
+#bannerCenterText{
+	padding-top: 100px;
+	color: #fff;
+	font-size: 3em;
+	text-align: center;
+}
+
+#myName{
+	font-size: 2em;
+	margin-bottom: 60px;
+}
+
+/* Navigation Bar */
+nav{
+	background-color: #fff;
+	height: 240px;
+	width: 100%;
+	margin-top: 150px;
+	font-family: Helvetica;
+	padding-top: 10px;
+}
+
+#navbarBox {
+	height: 70px;
+	box-shadow: 2px 4px 4px #ccc;
+}
+
+#navbar ul {
+	list-style-type: none;
+}
+
+#navbar ul li {
+	padding: 5%;
+	width: 20%;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.2em;
+}
+
+#blank {
+	margin: 0 10%;
+}
+
+#selfie {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 5px solid #C2973C;
+	background-color: #fff;
+	position: absolute;
+	margin: -150px 0 0 44%;
+}
+
+
+/* ABOUT ME Section */
+
+#aboutMe{
+	margin-top: -150px;
+	height: 300px;
+	width: 100%;
+	padding-top: 100px;
+}
+
+.mainBox {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.homePageSubTitle {
+	font-size: 2.5em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.description {
+	width: 100%;
+	font-size: 1.2em;
+	color: #888;
+	line-height: 1.3em;
+	margin: 0 5px;
+	text-align: justify;
+}
+
+.banner {
+	margin-top: 80px;
+	margin-bottom: 100px;
+	height: 200px;
+	width: 100%;
+	background-image: url("http://img.bizhi.sogou.com/images/2013/10/14/393954.jpg");
+}
+
+#experience {
+	width: 80%;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.row{
+	width: 100%;
+}
+
+.leftColumn, .rightColumn{
+	float: left;
+	width: 45%;
+	margin: 0 2.5%;
+}
+
+.clear {
+	clear: both;
+}
+
+.position {
+	color: #C2973C;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 10px 5px;
+}
+
+.company {
+	color: #000;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 20px 0 5px 5px;
+}
+
+.jobDescription {
+	margin: 5px 0 20px 5px;
+	color: #888;
+}
+
+/* BLOG SECTION */
+
+#blog {
+	width: 80%;
+	height: 500px;
+	margin: 100px auto;
+}
+
+.leftColumn img {
+	margin: 5px;
+}
+
+.block{
+	height: 80px;
+}
+
+.blogTitle{
+	color: #000;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.blogSummary {
+	margin-top: 10px;
+	color: #888;
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+#finBlog{
+	margin: 200px auto;
+	width: 80%;
+}
+
+.blogBox{
+	width: 30%;
+	margin: 0 1.5% 0 1.5%;
+	float: left;
+}
+
+.blogPostPhoto img {
+	margin-bottom: 20px;
+
+}
+
+.blogPost{
+	width: 88%;
+	text-align: justify;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	margin: 50px auto;
+	color: #ccc;
+	text-align: center;
+}
