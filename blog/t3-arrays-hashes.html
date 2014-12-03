@@ -27,13 +27,13 @@
           From doing exercises this week, I learned that how to create a hash from an array. I think it will be pretty useful in the future pratices.
           <br>
           <p>
-              array = ["apple", "cat", "oranges", "rabbits"]
-              new_hash = Hash.new
-              array.each do |element|
-                      new_hash[element] = element.length
-              end
-              new_hash
-              #{"apple"=>5, "cat"=>3, "oranges"=>7, "rabbits"=>7}
+              array = ["apple", "cat", "oranges", "rabbits"] <br>
+              new_hash = Hash.new <br>
+              array.each do |element| <br>
+                      new_hash[element] = element.length <br>
+              end <br>
+              new_hash <br>
+              #{"apple"=>5, "cat"=>3, "oranges"=>7, "rabbits"=>7} <br>
           </p>
           <br>
           How simple is that? Right?
@@ -43,12 +43,12 @@
 
           <br>
           <p>
-                  array = ["aaa", "a", "aa"]
-                  array.max_by { |x| -x.length }
-                  # => "a"
+                  array = ["aaa", "a", "aa"] <br>
+                  array.max_by { |x| -x.length } <br>
+                  # => "a" <br>
 
-                  [].max_by { |x| -x.length }
-                  # => nil
+                  [].max_by { |x| -x.length } <br>
+                  # => nil <br>
           </p>
           <br>
           Just two lines of code, you can get which is the longest words in an array. That is how powerful RUBY is. I remember when I was doing some JS practices before, I had to write at least ten lines of code to solve the problem.
