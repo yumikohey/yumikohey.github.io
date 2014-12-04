@@ -1,15 +1,11 @@
 html{
 	color: #000;
 	font-family: Helvetica;
-	overflow-y: scroll; 
-	overflow-x: hidden;
 }
 body{
 }
 .container-fluid{
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
+	overflow: hidden;
 }
 
 header{
@@ -19,7 +15,6 @@ header{
 }
 
 #top{
-	width: 100%;
 	height: 50px;
 	background-color: #000;
 	border-bottom: 10px solid #C2973C;
@@ -91,13 +86,12 @@ ul li {
 /* Banner Section */
 
 #banner {
-	width: 100%;
 	height: 300px;
 }
 
 #banner img {
 	margin-top: -200px;
-	margin-left: -10px;
+	margin-left:  -10px;
 	width: 100%;
 	position: absolute;
 	z-index: -500;
