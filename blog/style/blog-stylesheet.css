@@ -1,0 +1,73 @@
+#blog_banner{
+  height: 400px;
+  background-image: url('https://beauteyumiko.files.wordpress.com/2014/12/cropped-blog_header2.jpg');
+  background-size: cover;
+}
+
+#blog_navbar{
+  border-top:10px solid #C2973C;
+  background-color: #000;
+  color: #fff;
+  height: 60px;
+  margin-top: -80px;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+#blog_navbar ul{
+  float: right;
+  padding: 0px 35px;
+}
+
+#blog_navbar ul li {
+  margin-right: 80px;
+}
+
+a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  margin-right: -10px;
+}
+
+a:visited {
+  color: #fff;
+}
+
+aside{
+  width: 20%;
+  background-color: #000;
+  color: #fff;
+  height: 1200px;
+  padding-top: 50px;
+  float: left;
+}
+
+#asideList{
+  margin-left: 30px;
+}
+
+main {
+  width: 80%;
+  float: left;
+}
+
+article {
+  margin: 50px 250px 0px 50px;
+  font-size: 1.2em;
+}
+
+.title{
+  font-size: 2em;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.paragraph {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.block {
+  height: 180px;
+}
