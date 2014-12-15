@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Ruby Enumerable Methods</title>
+  <link rel="stylesheet" href="style/default.css">
+  <link rel="stylesheet" href="style/blog-stylesheet.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <header>
+      <div id="blog_banner">
+
+      <!--Top bar in black with a bottom-border and a button in the middle-->
+      <div id="top">
+        <div id="socialBar_top">
+          <ul>
+            <li><a href="#"><img src="../img/google-icon.png"></a></li>
+            <li><a href="#"><img src="../img/linkedin-icon.png"></a></li>
+            <li><a href="#"><img src="../img/twitter-icon.png"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="expandButton">
+        <div class="centerBox">
+          <div id="diamondButton"><span id="plusSign"> + </span></div>
+        </div>
+      </div>
+      <div id="expandSection">
+      </div>
+      </div>
+    </header>
+
+    <section>
+      <nav id="blog_navbar">
+        <ul>
+          <a href="../index.html"><li>Home</li></a>
+          <a href="#"><li>Coding Blog</li></a>
+          <a href="#"><li>Portfolio</li></a>
+          <a href="#"><li>About Me</li></a>
+        </ul>
+      </nav>
+    </section>
+
+    <div class="container">
+      <aside>
+        <div id="asideList">RECENT POSTS</div>
+        <a href="t4-enumerable-methods.html"><div id="asideList">Ruby Enumerable Methods</div></a>
+        <a href="c3_thinking-style.html"><div id="asideList">Growth Mind Set</div></a>
+        <a href="t3-arrays-hashes.html"><div id="asideList">Arrays and Hashes</div></a>
+        <a href="t2-css-design.html"><div id="asideList">CSS Design</div></a>
+        <a href="t1-git-blog.html"><div id="asideList">Git Blog</div></a>
+        <a href="c1-chefs-kitchen.html"><div id="asideList">Chefs Kitchen</div></a>
+      </aside>
+      <main>
+        <article>
+          <div class="title">Ruby Enumerable Methods</div>
+          <h3>Map, Group_by, and Cycle</h3>
+          <div class="paragraph">
+          <p>
+            map { |item| block } → new_ary
+            map → Enumerator
+            Invokes the given block once for each element of self.
+
+            Creates a new array containing the values returned by the block.
+
+            See also Enumerable#collect.
+
+            If no block is given, an Enumerator is returned instead.
+            ex.
+            a = [ "a", "b", "c", "d" ]
+            a.collect { |x| x + "!" }        #=> ["a!", "b!", "c!", "d!"]
+            a.map.with_index{ |x, i| x * i } #=> ["", "b", "cc", "ddd"]
+            a                                #=> ["a", "b", "c", "d"]
+          </p>
+          <p>
+            group_by { |obj| block } → a_hash
+            group_by → an_enumerator
+            Groups the collection by result of the block. Returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key.
+
+            If no block is given an enumerator is returned.
+
+            ex.
+            (1..6).group_by { |i| i%3 }   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
+          </p>
+          <p>
+            cycle(n=nil) { |obj| block } → nil
+            cycle(n=nil) → an_enumerator
+            Calls block for each element of enum repeatedly n times or forever if none or nil is given. If a non-positive number is given or the collection is empty, does nothing. Returns nil if the loop has finished without getting interrupted.
+
+            #cycle saves elements in an internal array so changes to enum after the first pass have no effect.
+
+            If no block is given, an enumerator is returned instead.
+
+            a = ["a", "b", "c"]
+            a.cycle { |x| puts x }  # print, a, b, c, a, b, c,.. forever.
+            a.cycle(2) { |x| puts x }  # print, a, b, c, a, b, c.
+
+          </p>
+          </div>
+        </article>
+
+        <div class="block"></div>
+      </main>
+    </div>
+  </div>
+
+
+</body>
+</html>
