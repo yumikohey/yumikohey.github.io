@@ -2,14 +2,43 @@
 <head>
   <meta charset="UTF-8">
   <title>chapter_one</title>
+  <style>
+  body{
+    height: 1000px;
+
+  }
+  #canvasOne {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 250px);
+  }
+
+  #notes {
+    width: 30%;
+    height: 200px;
+    position: absolute;
+    top: 400px;
+    left: calc(50% - 200px);
+    color: #000;
+  }
+  </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 </head>
 <body>
-<script src="letterToGuess.js"></script>
-<div style="position: absolute; top: 50px; left: 50px;">
+<div id="notes">
+    <h3>features can be added</h3>
+    <ul>
+      <li>if user guessed the correct letter, a balloon will be exposed.</li>
+      <li>local storage</li>
+      <li>limited lives</li>
+      <li>calculate the possiblities to get it right</li>
+    </ul>
+</div>
 <canvas id="canvasOne" width="500" height="300">
 <form>
-  <input type="button" id="createImageData" value="Export Canvas Image">
+<input type="button" id="createImageData" value="Export Canvas Image">
 </form>
+
+<script src="letterToGuess.js"></script>
 </body>
 </html>
