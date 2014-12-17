@@ -72,3 +72,11 @@ article {
 .block {
   height: 180px;
 }
+
+article a {
+  color: #C2973C;
+}
+
+article a:visited {
+  color: #C2973C;
+}
