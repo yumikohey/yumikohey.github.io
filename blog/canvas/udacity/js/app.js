@@ -1,5 +1,3 @@
-const PLAYERSTEPX = 100;
-const PLAYERSTEPY = 85;
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -45,6 +43,8 @@ var Player = function() {
     this.y = 390;
     this.width = 171;
     this.height = 101;
+    this.perStepX = 100;
+    this.perStepY = 85;
 }
 
 Player.prototype.update = function() {
@@ -68,22 +68,47 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function (keys) {
     if(keys == 'left'){
-        this.x -= PLAYERSTEPX;
+        this.x -= this.perStepX;
     }
     if(keys == 'right'){
-        this.x += PLAYERSTEPX;
+        this.x += this.perStepX;
     }
     if(keys == 'up'){
-        this.y -= PLAYERSTEPY;
+        this.y -= this.perStepY;
     }
     if(keys == 'down'){
-        this.y += PLAYERSTEPY;
+        this.y += this.perStepY;
     }
 
 }
 
-function checkCollisions(enemy, player) {
+function checkCollisions() {
+    for(var i=0; i < allEnemies.length; i++){
+        if (!boundingBoxCollide(allEnemies[i], player)){
+            player.x = 200;
+            player.y = 390;
+        }
+    }
+}
 
+function boundingBoxCollide(object1, object2) {
+
+    var left1 = object1.x;
+    var left2 = object2.x;
+    var right1 = object1.x + object1.width/2;
+    var right2 = object2.x + object2.width/2;
+    var top1 = object1.y;
+    var top2 = object2.y;
+    var bottom1 = object1.y + object1.height/2;
+    var bottom2 = object2.y + object2.height/2;
+
+    if (bottom1 < top2) return(false);
+    if (top1 > bottom2) return(false);
+
+    if (right1 < left2) return(false);
+    if (left1 > right2) return(false);
+
+    return(true);
 }
 
 // Now instantiate your objects.
@@ -95,7 +120,7 @@ var enemy_3 = new Enemy();
 var enemy_4 = new Enemy();
 var enemy_5 = new Enemy();
 var enemy_6 = new Enemy();
-    allEnemies = [enemy_1, enemy_2, enemy_3, enemy_4, enemy_5,enemy_6];
+var allEnemies = [enemy_1, enemy_2, enemy_3, enemy_4, enemy_5,enemy_6];
 
 // Place the player object in a variable called player
 var player = new Player();
