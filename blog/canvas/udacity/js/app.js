@@ -84,7 +84,7 @@ Player.prototype.handleInput = function (keys) {
 
 function checkCollisions() {
     for(var i=0; i < allEnemies.length; i++){
-        if (!boundingBoxCollide(allEnemies[i], player)){
+        if (boundingBoxCollide(allEnemies[i], player)){
             player.x = 200;
             player.y = 390;
         }
