@@ -34,6 +34,8 @@ var Engine = (function(global) {
      * and handles properly calling the update and render methods.
      */
     function main() {
+
+
         /* Get our time delta information which is required if your game
          * requires smooth animation. Because everyone's computer processes
          * instructions at different speeds we need a constant value that
@@ -46,6 +48,8 @@ var Engine = (function(global) {
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
          */
+    //    game.render();
+    //    game.update();
         update(dt);
         render();
 
@@ -80,6 +84,7 @@ var Engine = (function(global) {
      * on the entities themselves within your app.js file).
      */
     function update(dt) {
+
         updateEntities(dt);
         checkCollisions();
     }
@@ -96,6 +101,9 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+        allLives.forEach(function(life) {
+        life.update();
+        });
     }
 
     /* This function initially draws the "game level", it will then call
@@ -105,6 +113,7 @@ var Engine = (function(global) {
      * they are just drawing the entire screen over and over.
      */
     function render() {
+
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
@@ -137,7 +146,6 @@ var Engine = (function(global) {
             }
         }
 
-
         renderEntities();
     }
 
@@ -154,6 +162,9 @@ var Engine = (function(global) {
         });
 
         player.render();
+        allLives.forEach(function(life) {
+            life.render();
+        });
     }
 
     /* This function does nothing but it could have been a good place to
@@ -173,7 +184,7 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png',
+        'images/Heart.png',
         'images/char-horn-girl.png',
         'images/enemy-bug.png'
     ]);

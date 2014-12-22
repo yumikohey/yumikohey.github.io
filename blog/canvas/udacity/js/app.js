@@ -1,3 +1,31 @@
+var START = 0;
+var StartGame = function() {
+}
+
+StartGame.prototype.update = function(keys) {
+    if(keys == 'space'){
+        START = 1;
+    }
+
+    if(START === 0)
+        this.render();
+    return;
+}
+
+StartGame.prototype.render = function() {
+    ctx.font = "30px Verdana";
+    var gradient = ctx.createLinearGradient(0, 0, 606, 0);
+    gradient.addColorStop("0", "magenta");
+    gradient.addColorStop("0.5", "blue");
+    gradient.addColorStop("1.0", "red");
+    // Fill with gradient
+    ctx.fillStyle = gradient;
+    ctx.fillText("Start Game", 200, 250);
+    //Description
+    ctx.font = "16px Georgia";
+    ctx.fillText("Press Space to Start the game", 200, 350);
+}
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -82,16 +110,37 @@ Player.prototype.handleInput = function (keys) {
 
 }
 
+function Life() {
+    this.x = 370;
+    this.y = 50;
+    this.lifeCount = 3;
+    this.loseLife = false;
+    this.sprite = 'images/Heart.png';
+}
+
+Life.prototype.update = function() {
+    if(loseLife){
+        this.lifeCount -= 1;
+        allLives.pop();
+    }
+}
+
+Life.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y, 35, 45);
+}
+
 function checkCollisions() {
+    loseLife = false;
     for(var i=0; i < allEnemies.length; i++){
-        if (boundingBoxCollide(allEnemies[i], player)){
+        if (collisionDetect(allEnemies[i], player)){
             player.x = 200;
             player.y = 390;
+            loseLife = true;
         }
     }
 }
 
-function boundingBoxCollide(object1, object2) {
+function collisionDetect(object1, object2) {
 
     var left1 = object1.x;
     var left2 = object2.x;
@@ -111,7 +160,10 @@ function boundingBoxCollide(object1, object2) {
     return(true);
 }
 
+
+
 // Now instantiate your objects.
+var game = new StartGame();
 // Place all enemy objects in an array called allEnemies
 
 var enemy_1 = new Enemy();
@@ -125,15 +177,32 @@ var allEnemies = [enemy_1, enemy_2, enemy_3, enemy_4, enemy_5,enemy_6];
 // Place the player object in a variable called player
 var player = new Player();
 
+// Life instance
+var loseLife = false;
+var life_1 = new Life();
+var life_2 = new Life();
+life_2.x = 410;
+var life_3 = new Life();
+life_3.x = 450;
+// A bug here!
+var life_4 = new Life();
+life_4.x = 450;
+var allLives = [life_1,life_2,life_3, life_4];
+
+//Start the game
+
+
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
+        36: 'space',
         37: 'left',
         38: 'up',
         39: 'right',
         40: 'down'
     };
 
+    game.update(allowedKeys[e.keyCode]);
     player.handleInput(allowedKeys[e.keyCode]);
 });
