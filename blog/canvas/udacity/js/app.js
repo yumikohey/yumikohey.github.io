@@ -12,6 +12,8 @@ StartGame.prototype.update = function(keys) {
     return;
 }
 
+
+
 StartGame.prototype.render = function() {
     ctx.font = "30px Verdana";
     var gradient = ctx.createLinearGradient(0, 0, 606, 0);
@@ -25,6 +27,8 @@ StartGame.prototype.render = function() {
     ctx.font = "16px Georgia";
     ctx.fillText("Press Space to Start the game", 200, 350);
 }
+
+
 
 // Enemies our player must avoid
 var Enemy = function() {
