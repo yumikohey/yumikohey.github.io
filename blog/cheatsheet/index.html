@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<div class="container">
+<head>
+  <title>CSS, a Cheat-sheet by Yumiko Huang and Deb Wolfe</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+</head>
+<div class="container">
+<header>
+    <div id="title">CSS </div>
+    <div class="row"><span id="subtitle"><img src="star-sign.png" width="15%"> ─ </span><span id="italic"> cheatsheet   </span> <span id="subtitle"> ─ <img src="star-sign.png" width="15%"> </span></div>
+    <div id="intro">
+        <p>Cascading style sheets, or css files, can be used to modify HTML elements in HTML files. This technique for shining up web pages was introduced with HTML 4.0. Each HTML tag looks for a modifier in the file specified in an HTML link tag of relation = "stylesheet" and type "css/text". The effect of the stylesheet line is to modify the HTML tag.
+        </p>
+        <p>The relationship between the stylesheet line and the HTML tag type doesn't have to be one to one. If that were true, we may as well specify all the style in the HTML tags. To display all paragraphs in arial font, we specify that in the stylesheet rather than in the HTML document. If we want our list-items to also display in arial font, we can promote the stylesheet font-family line to a body css line and take it out of the paragraph css line. To override the body font-family specification for certain special paragpraphs, enter another css line, say with a p-fw class, and specify the font-family of Courier.
+        </p>
+        <p>In this way, the HTML modification is cascading. First it looks in the outermost layer in this case, body. Then it looks to the next layer of p for paragraph. We haven't specified a font for p alone so that takes the body's font-family of Arial. For a p with class of p-fw, we refer to the specification in the stylesheet of font-family Courier and override the body specification of Arial.
+        </p>
+    </div>
+</header>
+    <main>
+        <section>
+             <div class="right-row" id="positioning">
+                <div class= "column yellow-title">
+                     Positioning
+                </div>
+                <div class="column">
+                    <span class="col-4">
+                      <p>fixed</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">position: </span><span class="blue">fixed;</span></p>
+                      <p>An element with a fixed position is positioned relative to the browser window, and will not move even if the window is scrolled.</p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>relative</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">position: </span><span class="blue">relative;</span></p>
+                      <p>A relative positioned element is positioned relative to its normal position.
+                      The content of relatively positioned elements can be moved and overlap other elements, but the reserved space for the element is still preserved in the normal flow.</p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>absolute</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">position: </span><span class="blue">absolute;</span></p>
+                      <p>An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is html. 
+                      When elements are positioned outside the normal flow, they can overlap other elements.The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+                      </p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+              </div>
+
+              <div class="right-row" id="text-section">
+                <div class= "column yellow-title">
+                     Text
+                </div>
+                <div class="column">
+                    <span class="col-4">
+                      <p>color</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">color: </span><span class="blue">#000;</span></p>
+                      <p><b>Modify the textual parts of element by set the color, text-align and text-ident properties.</b>
+                      <br>
+                      The color can be assigned to the text of an element in three ways:
+                      <ul>
+                      <li> <b> Hex: </b> a value like "ff0000". The order is such that #RRGGBB specify the components of color.
+                      </li>
+                      <li> <b> RGB: </b> a value rgb(255,0,0) will be set red since the first two places (RR) are specified with FF but the rest are set to 0.
+                      </li>
+                      <li> <b> Name: </b> a color name like red. There are 17 standard colors and 123 more making <a href = "http://www.w3schools.com/cssref/css_colornames.asp">140</a> all together.
+                      </li>
+                    </ul>
+                    </p>
+                    <div>
+                      <img src = "http://debwolfe.github.io/images/text-example.jpg" alt = "Text Example" />
+                      <img src = "http://debwolfe.github.io/images/text-example-result.jpg" alt = "Text Example Result" />
+                   </div>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>text-align</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">text-align: </span><span class="blue">center;</span></p>
+                      <p>Set the horizontal (left to right) orientation of the text with the text-align property. For example, it may make sense to center the headers on the page. The text can be set according to one of four attributes.</p>
+                      <ul>
+                      <li> <b> Center: </b> goes in the middle of the current horizontal space attributed to the element. For example, if a column is assigned to take up 30% of the page, the text-align: center element will go 15% from the left.
+                      </li>
+                      <li> <b> Left: </b> keeps the text on the left side of the surrounding element. This is the default. Only specify left when a surrounding element has center or right and that previous text-align needs to be overwritten with a new text-align of  left.
+                      </li>
+                      <li> <b> Align: </b> takes the horizontal space currently allocated to the textual part of the element and outputs the letters with space in between such that every line takes up the same amount of horizontal space as the line preceeding. This has the effect of making both the left and right margins straight.
+                      </li>
+                    </ul>
+
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>text-indent</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">position: </span><span class="blue">absolute;</span></p>
+                      <p>Set the left offset of the first line of text using the text-indent property. This literary practice is rarely used even in blog posts.
+                      </p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+              </div>
+
+              <div class="right-row" id="background-section">
+                <div class= "column yellow-title">
+                     Background
+                </div>
+                <div class="column">
+                    <span class="col-4">
+                      <p>margin</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">margin: </span><span class="blue">0 auto;</span></p>
+                      <p><b> Background elements can be addressed with the margin, padding and gradient properties.</b>
+                      <br>
+                    The margin property assures that there is free space between elements. Margin is transparent and will not cause a background to display. The shorthand property is used to specify all four directions in order. Starting from the top, go in a clockwise direction: Top, right, bottom, left.<br>
+                    There are four main modifiers for the margin property.
+                    <ul>
+                      <li><b>Auto: </b> The browser default calculation.
+                      </li>
+                      <li><b>Length: </b> The margin in px, ct, or cm. px is the most popular unit of measure.
+                      </li>
+                      <li> <b> %: </b> The percent of the width of the containing element.
+                      </li>
+                      <li><b> inherit </b> The margin inherited from the parent element.
+                      </li>
+                    </ul>
+                 <div>
+                      <img src = "http://debwolfe.github.io/images/margin-example.jpg" alt = "Text Example" />
+                      <img src = "http://debwolfe.github.io/images/margin-example-result.jpg" alt = "Text Example Result" />
+                   </div>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>padding</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">padding: </span><span class="blue">10px 20px;</span></p>
+                      <p>The padding property assures that there is free space around an element. For example, to keep text from bumping up against a horizontal rule preceeding the element, specify the top padding property. Specifying a margin would not be sufficent to keep the rule away from the text since margin starts outside the border of the element. Padding includes the space inside the border.
+                      </p>
+
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>line-gradient</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">background: </span><span class="blue">linear-gradient(red, blue);</span></p>
+                      <p>To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+                      </p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="column">
+                    <span class="col-4">
+                      <p>radical-gradient</p>
+                    </span>
+                    <span class="col-8">
+                      <p><span class="red">background: </span><span class="blue">radial-gradient(red, green, blue); </span></p>
+                      <p>A radial gradient is defined by its center. To create a radial gradient you must also define at least two color stops.
+                      By default, shape is ellipse, size is farthest-corner, and position is center.
+                      </p>
+                    </span>
+                    <span class="clear"></span>
+                </div>
+
+              </div>
+        </section>
+    </main>
+
+
+                <!--Background 
+                  <div class="column">
+                    line-gradient
+                </div>
+                 <div class="column">
+                    radical-gradient
+                </div>
+            </div>
+            <div id="clear">
+            </div>
+        </section>
+    </main>
+<footer>
+  Created by Deb Wolfe and Yumiko Huang, 2015
+</footer>
+
+-->
+
+</div>
+</html>

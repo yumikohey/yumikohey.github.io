@@ -1,0 +1,37 @@
+// http://myjson.com/4q067
+
+{
+    "info": [
+        {
+            "category": "Positioning",
+            "details":[
+              [{"type": "fixed",
+               "syntax": [
+                  "position: ",
+                  "fixed; "
+               ],
+               "description": "An element with a fixed position is positioned relative to the browser window, and will not move even if the window is scrolled."
+              }],
+
+              [{
+                "type": "relative",
+                "syntax": [
+                    "position: ",
+                    "relative; "
+                ],
+                "description": "A relative positioned element is positioned relative to its normal position. The content of relatively positioned elements can be moved and overlap other elements, but the reserved space for the element is still preserved in the normal flow."
+              }],
+
+              [{
+               "type": "absolute",
+               "syntax": [
+                "position: ",
+                "absolute; "
+               ],
+               "description": "An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is html. When elements are positioned outside the normal flow, they can overlap other elements.The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others)."
+              }]
+            ]
+            
+        }
+    ]
+}

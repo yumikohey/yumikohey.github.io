@@ -1,0 +1,117 @@
+body {
+    background-color: #99D8F0;
+    font-family: 'Maven Pro', sans-serif;
+    padding: 10px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.row {
+    text-align: center;
+}
+
+#title {
+    font-size: 5em;
+    color: #1fa0d1;
+    font-weight: bold;
+    text-align: center;
+}
+
+#subtitle {
+    font-size: 8em;
+    color: #1fa0d1;
+    font-weight: bold;
+    text-align: center;
+}
+
+#italic {
+    color:#000;
+    font-size: 5em;
+    vertical-align: 30%;
+    font-family: 'Parisienne', cursive;
+}
+
+#intro {
+    margin: 0 auto;
+    width: 95%;
+    line-height: 30px;
+
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+section{
+    background-color: #1f1f1f;
+    height: 3000px;
+}
+
+.right-row {
+    background-color: #1f1f1f;
+    color: #fff;
+    border-top: 20px #ddd solid;
+    width: 100%;
+    height: auto;
+    padding: 1px;
+}
+
+#positioning{
+    height: 550px;
+}
+
+#text-section{
+    height: 1150px;
+}
+
+#background-section{
+    height: 1200px;
+}
+
+.column{
+    padding: 5px 5px 5px 40px;
+    margin: -1px;
+    height: auto;
+}
+
+.yellow-title {
+    color: #1fa0d1;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.white-title{
+    font-size: 1em;
+}
+
+.col-4{
+    width: 20%;
+    float: left;
+}
+
+.col-8{
+    width: 75%;
+    float: left;
+}
+
+#clear {
+    clear: both;
+}
+
+.bold-font{
+    background-color: pink;
+}
+
+#example{
+    margin: 100px;
+}
+
+.red{
+    color: #FF4C4C;
+}
+
+.blue{
+    color: #1fa0d1;
+}
