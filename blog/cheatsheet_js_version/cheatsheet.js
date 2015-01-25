@@ -1,7 +1,7 @@
 $section = $('section');
 
 function display(){    
-    $.getJSON('https://yumikohey.github.io/blog/cheatsheet_js_version/data.json', function(data) {
+    $.getJSON('http://yumikohey.github.io/blog/cheatsheet_js_version/data.json', function(data) {
         $totalCategory = data.info.length;
         $totalType = data.info[0].details.length;
         $row = $("<div class='right-row'></div>");
