@@ -47,7 +47,6 @@ main {
 section{
     background-color: #1f1f1f;
     border-top: 20px #ddd solid;
-    height: 300px;
 }
 
 #right-row {
@@ -59,7 +58,7 @@ section{
 .column{
     padding: 5px 5px 5px 40px;
     margin: -1px;
-    height: auto;
+    
 }
 
 .yellow-title {
