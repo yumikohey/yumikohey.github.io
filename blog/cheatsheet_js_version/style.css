@@ -47,6 +47,7 @@ main {
 section{
     background-color: #1f1f1f;
     border-top: 20px #ddd solid;
+    height: 300px;
 }
 
 #right-row {
@@ -71,14 +72,17 @@ section{
     font-size: 1em;
 }
 
+
 .col-4{
     width: 20%;
     float: left;
+    color: #fff;
 }
 
 .col-8{
     width: 75%;
     float: left;
+    color: #fff;
 }
 
 #clear {

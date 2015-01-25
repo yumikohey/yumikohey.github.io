@@ -35,14 +35,21 @@
         },
 
         {
-            "category": "Positioning",
+            "category": "Background",
             "details":[
-              [{"type": "fixed",
+              [{"type": "line-gradient",
                "syntax": [
-                  "position: ",
-                  "fixed; "
+                  "background: ",
+                  "linear-gradient(red, blue); "
                ],
-               "description": "An element with a fixed position is positioned relative to the browser window, and will not move even if the window is scrolled."
+               "description": "To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect."
+              }],
+              [{"type": "radical-gradient",
+               "syntax": [
+                  "background: ",
+                  "radial-gradient(red, green, blue); "
+               ],
+               "description": "A radial gradient is defined by its center. To create a radial gradient you must also define at least two color stops. By default, shape is ellipse, size is farthest-corner, and position is center."
               }]
             ]       
         }
