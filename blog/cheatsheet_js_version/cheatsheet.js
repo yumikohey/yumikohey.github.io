@@ -3,7 +3,11 @@ $section = $('section');
 //https://api.myjson.com/bins/r9a7
 
 function display(){    
+<<<<<<< HEAD
     $.getJSON('https://api.myjson.com/bins/r9a7', function(data) {
+=======
+    $.getJSON('http://yumikohey.github.io/blog/cheatsheet_js_version/data.json', function(data) {
+>>>>>>> origin/master
         $totalCategory = data.info.length;
         $totalType = data.info[0].details.length;
         
