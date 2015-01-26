@@ -3,7 +3,6 @@ $section = $('section');
 //https://api.myjson.com/bins/r9a7
 
 function display(){    
-<<<<<<< HEAD
     $.getJSON('https://api.myjson.com/bins/r9a7', function(data) {
         $totalCategory = data.info.length;
         $totalType = data.info[0].details.length;
