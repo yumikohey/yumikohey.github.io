@@ -1,0 +1,80 @@
+.sub-nav{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+.top-blue{
+	border-top: 5px solid rgba(108,195,249,0.8);
+}
+
+.top-primary{
+	border-top: 5px solid rgba(11, 98, 164, 0.8);
+}
+
+.top-yellow{
+	border-top: 5px solid rgba(251, 191, 20, 0.8);
+}
+
+.top-success{
+	border-top: 5px solid rgba(50, 173, 50, 0.8);
+}
+.little_donuts{
+	padding: 0 10px;
+	background-color: rgba(204, 204, 204,0.1);
+}
+
+#total_cpu svg, #total_ram svg, #total_capacity svg{
+	height:200px;
+}
+
+.real_time_data{
+	padding: 0 10px;
+	background-color: rgba(204, 204, 204, 0.1);
+}
+
+canvas{
+	height: 200px;
+}
+
+.each_node{
+	margin: 15px 0;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.charger_box{
+	border: 1px solid #ccc;
+	height: 30px;
+	width: 30%;
+	margin: 1.5%;
+	float: left;
+}
+
+.partial_charged_1, .partial_charged_2, .partial_charged_3{
+	height: 100%;
+	background-color: #68BE68;
+	width: 28%;
+	border-radius-top-left: 1px;
+	border-radius-bottom-left: 1px;
+}
+
+.partial_charged_2{
+	width: 34%
+}
+
+.partial_charged_3{
+	width: 10%;
+}
+
+.node-title{
+	font-size: 12px;
+}
+
+.volume_details{
+	margin: 15px 5%;
+	width: 90%;
+}
+
+.volume_image{
+	margin: 20px auto;
+}
