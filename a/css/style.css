@@ -78,3 +78,15 @@ canvas{
 .volume_image{
 	margin: 20px auto;
 }
+
+.block{
+	height: 20px;
+}
+
+.allocation_box{
+	padding: 10px;
+}
+
+.memory_confirm_btn{
+	margin-right: 10px;
+}
