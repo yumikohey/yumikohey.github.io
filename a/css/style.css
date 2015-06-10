@@ -98,3 +98,11 @@ canvas{
 .bottom_buttons{
 	margin-top: 50px;
 }
+
+.button_box{
+	padding: 5px 10px;
+}
+
+.button_pad{
+	margin: 5px 10px;
+}
