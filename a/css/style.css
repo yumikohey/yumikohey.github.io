@@ -77,6 +77,8 @@ canvas{
 
 .volume_image{
 	margin: 20px auto;
+	width: 64px;
+	height: 64px;
 }
 
 .block{
@@ -99,10 +101,75 @@ canvas{
 	margin-top: 50px;
 }
 
-.button_box{
-	padding: 5px 10px;
+.submit_btn{
+	margin-top: 15px;
 }
 
-.button_pad{
-	margin: 5px 10px;
+.button_box{
+	margin: 0 auto;
+	padding: 5px 50px;
+}
+
+.ram_image{
+	width: 215px; 
+	height: 96px;
+}
+
+.upload_img{
+	width: 161.5px;
+	height: 96px;
+}
+
+@media (max-width: 1200px){
+	.node-title{
+		margin-left: 20px;
+	}
+
+	.node_list{
+		width: 80%;
+		margin-left: 10%;
+	}
+	.volume_image{
+		margin-left: 40px;
+		width: 100px;
+		height: 100px;
+	}
+  .ram_image{
+  	margin-left: 10px;
+  	width: 400px; 
+  	height: 200px;
+  }
+
+  .upload_img{
+  	margin-left: 10px;
+  	width: 400px;
+  	height: 232px;
+  }
+}
+
+@media (max-width: 768px) {
+	.volume_image{
+		margin-left: 40px;
+		width: 100px;
+		height: 100px;
+	}
+  .ram_image{
+  	margin-left: 60px;
+  	width: 400px; 
+  	height: 200px;
+  }
+
+  .upload_img{
+  	margin-left: 60px;
+  	width: 400px;
+  	height: 232px;
+  }
+}
+
+@media (max-width: 500px) {
+  .upload_img{
+  	margin-left: 40px;
+  	width: 400px;
+  	height: 232px;
+  }
 }
